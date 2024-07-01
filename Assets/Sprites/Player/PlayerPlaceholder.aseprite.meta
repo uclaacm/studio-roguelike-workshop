@@ -123,8 +123,8 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: PlayerPlaceholder
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
