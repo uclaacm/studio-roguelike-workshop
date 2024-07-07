@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7725347971992770342}
   - component: {fileID: 7295048805350958644}
   - component: {fileID: 7058242753605002859}
+  - component: {fileID: 2985373323896026450}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -158,7 +159,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &7058242753605002859
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -204,3 +205,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2985373323896026450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7615931143467286684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ed0fbc21e2ae46f4aba179e7c2c8121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 7547383389920784311, guid: bcf99dbfd7de4436e88e6f91d300c6d3, type: 3}
+  shootingSpeed: 15
+  playerAttackDelay: 0.5

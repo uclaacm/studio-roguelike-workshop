@@ -112,7 +112,7 @@
                 {
                     "name": "",
                     "id": "4734d99c-5e15-486f-8628-b1f7f8783fbd",
-                    "path": "<VirtualMouse>/leftButton",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "K&M",
