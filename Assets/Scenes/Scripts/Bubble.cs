@@ -6,20 +6,18 @@ public class Bubble : MonoBehaviour
 {
     [SerializeField] new Rigidbody2D rigidbody;
     [SerializeField] float lifeTime = 5.0f;
-    float startTime;
     [SerializeField] float damage = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
-        startTime = Time.time;
+        Destroy(gameObject, lifeTime);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.time - startTime > lifeTime)
-            Destroy(gameObject);
+
     }
 
     // this function is called when another object enters the projectile's collider 
