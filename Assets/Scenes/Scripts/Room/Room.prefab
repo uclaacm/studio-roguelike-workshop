@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 1923916239233591523}
   - component: {fileID: 217618059605083526}
   - component: {fileID: 5976932445550731661}
+  - component: {fileID: 3209971333458447819}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -305,11 +306,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 177820a04b2e3f7fb93fd11a6147d8cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerEnteredRoomEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  PlayerFirstEnteredRoomEvent:
+    m_PersistentCalls:
+      m_Calls: []
   vcam: {fileID: 45881957047466398}
   leftWall: {fileID: 1358026726010589466}
   rightWall: {fileID: 5834955339090731071}
   topWall: {fileID: 1943251891873069171}
   bottomWall: {fileID: 3483857201852648602}
+--- !u!114 &3209971333458447819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7406825414062079965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2a7fc4968c9a386a92bf5519534e1b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 5976932445550731661}
 --- !u!1 &7785149359585060070
 GameObject:
   m_ObjectHideFlags: 0

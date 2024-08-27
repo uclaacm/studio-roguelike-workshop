@@ -51,6 +51,7 @@ public class RoomSpawner : MonoBehaviour {
 				);
 
 				room.Location = new(x, y);
+				room.Contents = MapEntryTypeToRoomContents(entry.Type).Value;
 
 				Rooms.Add(room);
 
@@ -74,5 +75,15 @@ public class RoomSpawner : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+	RoomContents? MapEntryTypeToRoomContents(MapEntryType type){
+		switch(type){
+			case MapEntryType.BossRoom: return RoomContents.Boss;
+			case MapEntryType.StartRoom: return RoomContents.Empty;
+			case MapEntryType.ItemRoom: return RoomContents.Item;
+			case MapEntryType.NormalRoom: return RoomContents.Normal;
+		}
+		return null;
 	}
 }

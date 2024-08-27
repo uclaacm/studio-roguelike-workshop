@@ -1,10 +1,21 @@
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.Events;
+
+public enum RoomContents {
+    Normal,
+    Empty,
+    Boss,
+    Item,
+}
 
 public class Room : MonoBehaviour
 {
     const string PLAYER_TAG = "Player";
+
+    [SerializeField] public UnityEvent PlayerEnteredRoomEvent;
+    [SerializeField] public UnityEvent PlayerFirstEnteredRoomEvent;
 
     [SerializeField] CinemachineVirtualCamera vcam;
     [SerializeField] Wall leftWall;
@@ -18,19 +29,34 @@ public class Room : MonoBehaviour
     // Roughly equivalent to [round(position.x / 24), round(position.y / 18)]
     [System.NonSerialized] public Vector2Int Location;
 
+    [System.NonSerialized] public RoomContents Contents;
+
     bool active = false;
-    bool playerInDoor = false;
+    bool previouslyEntered = false;
 
     public void InitializeDoors(bool leftDoor, bool rightDoor, bool topDoor, bool bottomDoor){
-        leftWall.SetSprite(leftDoor ? Wall.WallSprite.Door : Wall.WallSprite.Default);
-        rightWall.SetSprite(rightDoor ? Wall.WallSprite.Door : Wall.WallSprite.Default);
-        topWall.SetSprite(topDoor ? Wall.WallSprite.Door : Wall.WallSprite.Default);
-        bottomWall.SetSprite(bottomDoor ? Wall.WallSprite.Door : Wall.WallSprite.Default);
+        leftWall.SetDoorEnabled(leftDoor);
+        rightWall.SetDoorEnabled(rightDoor);
+        topWall.SetDoorEnabled(topDoor);
+        bottomWall.SetDoorEnabled(bottomDoor);
+    }
+
+    public void CloseDoors(){
+        leftWall.SetDoorOpen(false);
+        rightWall.SetDoorOpen(false);
+        topWall.SetDoorOpen(false);
+        bottomWall.SetDoorOpen(false);
+    }
+
+    public void OpenDoors(){
+        leftWall.SetDoorOpen(true);
+        rightWall.SetDoorOpen(true);
+        topWall.SetDoorOpen(true);
+        bottomWall.SetDoorOpen(true);
     }
 
     void Start(){
         foreach(var wall in new Wall[] { leftWall, rightWall, topWall, bottomWall }) {
-            wall.PlayerEnteredWallEvent.AddListener(OnPlayerEnterWall);
             wall.PlayerExitedWallEvent.AddListener(OnPlayerExitWall);
         }
     }
@@ -50,15 +76,13 @@ public class Room : MonoBehaviour
             vcam.enabled = false;
         }
     }
-
-    public void OnPlayerEnterWall(){
-        playerInDoor = true;
-    }
-
     public void OnPlayerExitWall(){
-        playerInDoor = false;
         if(active){
-            Debug.Log("START ROOM");
+            PlayerEnteredRoomEvent.Invoke();
+            if(!previouslyEntered){
+                PlayerFirstEnteredRoomEvent.Invoke();
+                previouslyEntered = true;
+            }
         }
     }
 }

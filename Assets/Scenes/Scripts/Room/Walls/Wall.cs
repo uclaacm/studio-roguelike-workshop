@@ -13,27 +13,25 @@ public class Wall : MonoBehaviour
     [SerializeField] public UnityEvent PlayerEnteredWallEvent;
     [SerializeField] public UnityEvent PlayerExitedWallEvent;
 
-    public enum WallSprite {
-        Default,
-        Door,
-    }
+    bool doorEnabled = false;
 
-    void Awake(){
-        SetDoorOpen(true);
-    }
+    public void SetDoorEnabled(bool enabled){
+        if(doorEnabled == enabled) return;
+        doorEnabled = enabled;
 
-    public void SetSprite(WallSprite wallSprite){
-        if(wallSprite == WallSprite.Default){
+        if (!enabled){
             wallWithDoorSprite.SetActive(false);
             wallWithoutDoorSprite.SetActive(true);
         }
-        else if(wallSprite == WallSprite.Door) {
+        else {
             wallWithDoorSprite.SetActive(true);
             wallWithoutDoorSprite.SetActive(false);
+            SetDoorOpen(true);
         }
     }
 
     public void SetDoorOpen(bool open){
+        if(!doorEnabled) return;
         doorCollider.enabled = !open;
         doorAnimator.SetBool("open", open);
     }
