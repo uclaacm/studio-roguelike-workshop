@@ -6,8 +6,6 @@ public class Room : MonoBehaviour
 {
     const string PLAYER_TAG = "Player";
 
-    [SerializeField] public Transform Center;
-
     [SerializeField] CinemachineVirtualCamera vcam;
     [SerializeField] Wall leftWall;
     [SerializeField] Wall rightWall;
