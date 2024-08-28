@@ -76,7 +76,7 @@ public class Room : MonoBehaviour
             vcam.enabled = false;
         }
     }
-    public void OnPlayerExitWall(){
+    void OnPlayerExitWall(){
         if(active){
             PlayerEnteredRoomEvent.Invoke();
             if(!previouslyEntered){
