@@ -12,10 +12,18 @@ class RoomWave : MonoBehaviour {
 	}
 
 	void StartWave(){
-		room.CloseDoors();
+		Debug.Log("Start wave");
+		// room.CloseDoors();
+		foreach(var spawnPoint in room.Layout.EnemySpawnPoints){
+			SpawnRandomEnemy(spawnPoint);
+		}
 	}
 
 	void EndWave(){
-		room.OpenDoors();
+		// room.OpenDoors();
+	}
+
+	void SpawnRandomEnemy(Transform spawnPoint){
+		// todo
 	}
 }

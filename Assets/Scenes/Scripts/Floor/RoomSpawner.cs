@@ -43,11 +43,11 @@ public class RoomSpawner : MonoBehaviour {
 				);
 
 				var room = roomGO.GetComponent<Room>();
-				room.InitializeDoors(
-					leftDoor: !leftEmpty,
-					rightDoor: !rightEmpty,
-					topDoor: !topEmpty,
-					bottomDoor: !bottomEmpty
+				room.InitializeLayout(
+					(!leftEmpty ? DoorPositionMask.Left : 0)
+					| (!rightEmpty ? DoorPositionMask.Right : 0)
+					| (!topEmpty ? DoorPositionMask.Top : 0)
+					| (!bottomEmpty ? DoorPositionMask.Bottom : 0)
 				);
 
 				room.Location = new(x, y);
@@ -60,18 +60,25 @@ public class RoomSpawner : MonoBehaviour {
 						Debug.LogWarning("Multiple start rooms");
 					}
 					StartRoom = room;
+					room.Contents = RoomContents.Empty;
 				}
 				else if(entry.Type == MapEntryType.BossRoom) {
 					if(BossRoom){
 						Debug.LogWarning("Multiple boss rooms");
 					}
 					BossRoom = room;
+					room.Contents = RoomContents.Boss;
 				}
 				else if(entry.Type == MapEntryType.ItemRoom) {
 					if(ItemRoom){
 						Debug.LogWarning("Multiple item rooms");
 					}
 					ItemRoom = room;
+					room.Contents = RoomContents.Item;
+				}
+				// Normal room
+				else {
+					room.Contents = RoomContents.Normal;
 				}
 			}
 		}
