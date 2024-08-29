@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2441975823005131170}
   - component: {fileID: 1047283160286321719}
+  - component: {fileID: 8311520631162377249}
   - component: {fileID: 8134242626436513821}
   - component: {fileID: 1352911681908152458}
   - component: {fileID: 5840969401200209581}
   m_Layer: 0
   m_Name: MeleeEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -3455860944406331723, guid: d9e3b379541b3344da85245ecb57493d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.76729554, g: 0.16648854, b: 0.16648854, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -87,6 +88,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8311520631162377249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6539112502260803746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7a0441c05523e48bf721b8b9763ccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  stats:
+    MaxHealth: 0
+    MovementSpeed: 0
 --- !u!114 &8134242626436513821
 MonoBehaviour:
   m_ObjectHideFlags: 0
