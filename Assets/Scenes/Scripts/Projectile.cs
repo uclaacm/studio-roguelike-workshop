@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bubble : MonoBehaviour
+public class Projectile : MonoBehaviour
 {
     [SerializeField] new Rigidbody2D rigidbody;
     [SerializeField] float lifeTime = 5.0f;
-    float startTime;
     [SerializeField] float damage = 1f;
+    float startTime;
 
     // Start is called before the first frame update
     void Start()
@@ -32,10 +32,10 @@ public class Bubble : MonoBehaviour
         if (other.tag == "Enemy")
         {
             // other.GetComponent gets a component on the same game object as other (which is the collider and not the game object itself)
-            // In this case, it gets the EnemyHealth component, which is a script (a type of component)
+            // In this case, it gets the Entity component, which is a script (a type of component)
             // After getting that script, we can call TakeDamage(damage) on that script to deal damage
             // Unity documentation: https://docs.unity3d.com/ScriptReference/Component.GetComponent.html
-            EnemyHealth enemy = other.GetComponent<EnemyHealth>();
+            Entity enemy = other.GetComponent<Entity>();
 
             enemy.TakeDamage(damage);
 
