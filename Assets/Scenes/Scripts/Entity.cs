@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using System;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
+using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
@@ -17,7 +14,7 @@ public class Entity : MonoBehaviour
     public Rigidbody2D rb;
     public EntityStats stats;
 
-    [NonSerialized]
+    //[NonSerialized]
     public float CurrentHealth;
 
     public void TakeDamage(float damage)
@@ -36,6 +33,11 @@ public class Entity : MonoBehaviour
     {
         Debug.Log("oof you died");
         Destroy(gameObject);
+    }
+
+    private void Start()
+    {
+        CurrentHealth = stats.MaxHealth;
     }
 
 }
