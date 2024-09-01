@@ -1,9 +1,9 @@
-using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.Events;
 
-public enum RoomContents {
+public enum RoomContents
+{
     Normal,
     Empty,
     Boss,
@@ -11,7 +11,8 @@ public enum RoomContents {
 }
 
 [System.Flags, System.Serializable]
-public enum DoorPositionMask {
+public enum DoorPositionMask
+{
     Left = 1,
     Right = 2,
     Top = 4,
@@ -49,7 +50,8 @@ public class Room : MonoBehaviour
     bool active = false;
     bool previouslyEntered = false;
 
-    public void InitializeLayout(DoorPositionMask doorPositions){
+    public void InitializeLayout(DoorPositionMask doorPositions)
+    {
         leftWall.SetDoorEnabled((doorPositions & DoorPositionMask.Left) > 0);
         rightWall.SetDoorEnabled((doorPositions & DoorPositionMask.Right) > 0);
         topWall.SetDoorEnabled((doorPositions & DoorPositionMask.Top) > 0);
@@ -60,22 +62,26 @@ public class Room : MonoBehaviour
         Layout = randomLayoutGO.GetComponent<RoomLayout>();
     }
 
-    public void CloseDoors(){
+    public void CloseDoors()
+    {
         leftWall.SetDoorOpen(false);
         rightWall.SetDoorOpen(false);
         topWall.SetDoorOpen(false);
         bottomWall.SetDoorOpen(false);
     }
 
-    public void OpenDoors(){
+    public void OpenDoors()
+    {
         leftWall.SetDoorOpen(true);
         rightWall.SetDoorOpen(true);
         topWall.SetDoorOpen(true);
         bottomWall.SetDoorOpen(true);
     }
 
-    void Start(){
-        foreach(var wall in new Wall[] { leftWall, rightWall, topWall, bottomWall }) {
+    void Start()
+    {
+        foreach (var wall in new Wall[] { leftWall, rightWall, topWall, bottomWall })
+        {
             wall.PlayerExitedWallEvent.AddListener(OnPlayerExitWall);
         }
     }
@@ -83,7 +89,8 @@ public class Room : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.CompareTag(PLAYER_TAG)) {
+        if (collider.CompareTag(PLAYER_TAG))
+        {
             vcam.enabled = true;
             active = true;
         }
@@ -91,15 +98,19 @@ public class Room : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collider)
     {
-        if(collider.CompareTag(PLAYER_TAG)) {
+        if (collider.CompareTag(PLAYER_TAG))
+        {
             active = false;
             vcam.enabled = false;
         }
     }
-    void OnPlayerExitWall(){
-        if(active){
+    void OnPlayerExitWall()
+    {
+        if (active)
+        {
             PlayerEnteredRoomEvent.Invoke();
-            if(!previouslyEntered){
+            if (!previouslyEntered)
+            {
                 PlayerFirstEnteredRoomEvent.Invoke();
                 previouslyEntered = true;
             }
