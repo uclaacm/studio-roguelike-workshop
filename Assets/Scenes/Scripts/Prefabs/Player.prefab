@@ -10,14 +10,16 @@ GameObject:
   m_Component:
   - component: {fileID: 2498103666597188799}
   - component: {fileID: 8879189458742161183}
+  - component: {fileID: 8210492558478036398}
   - component: {fileID: -402969228387600620}
+  - component: {fileID: 7094412602196616899}
   - component: {fileID: 7725347971992770342}
   - component: {fileID: 7295048805350958644}
   - component: {fileID: 7058242753605002859}
   - component: {fileID: 2985373323896026450}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,6 +69,22 @@ MonoBehaviour:
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &8210492558478036398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7615931143467286684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7a0441c05523e48bf721b8b9763ccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 7295048805350958644}
+  stats:
+    MaxHealth: 5
+    MovementSpeed: 1
 --- !u!114 &-402969228387600620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,6 +99,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 7295048805350958644}
   movementSpeed: 3
+--- !u!114 &7094412602196616899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7615931143467286684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8c77fc6e7e8d84cb308b7cb7c16533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProjectileShootEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  projectilePrefab: {fileID: 7547383389920784311, guid: bcf99dbfd7de4436e88e6f91d300c6d3, type: 3}
+  shootingSpeed: 5
+  shootingCooldown: 1
+  damage: 1
+  projectileLifetime: 5
 --- !u!212 &7725347971992770342
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -217,6 +255,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed0fbc21e2ae46f4aba179e7c2c8121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bubblePrefab: {fileID: 7547383389920784311, guid: bcf99dbfd7de4436e88e6f91d300c6d3, type: 3}
-  shootingSpeed: 15
-  playerAttackDelay: 0.5
+  projectilePrefab: {fileID: 7547383389920784311, guid: bcf99dbfd7de4436e88e6f91d300c6d3, type: 3}

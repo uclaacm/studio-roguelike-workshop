@@ -20,6 +20,11 @@ public class Entity : MonoBehaviour
     [NonSerialized]
     public float CurrentHealth;
 
+    private void Start()
+    {
+        CurrentHealth = stats.MaxHealth;
+    }
+
     public void TakeDamage(float damage)
     {
 
