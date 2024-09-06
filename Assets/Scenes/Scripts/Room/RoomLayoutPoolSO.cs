@@ -29,7 +29,7 @@ public class RoomLayoutPoolSO : ScriptableObject {
 			var poolPrefabs = item.Value;
 
             // if the pool is valid for all the door positions
-            if((item.Key & doorPositions) == doorPositions){
+            if((poolDoorPositions & doorPositions) == doorPositions){
                 validPools.Add(poolPrefabs);
                 totalLayouts += poolPrefabs.Count;
             }
