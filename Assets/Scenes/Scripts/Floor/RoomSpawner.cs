@@ -13,7 +13,7 @@ public class RoomSpawner : MonoBehaviour
     [System.NonSerialized] public List<Room> Rooms = new();
     [System.NonSerialized] public Room StartRoom = null;
     [System.NonSerialized] public Room BossRoom = null;
-    [System.NonSerialized] public Room ItemRoom = null;
+    [System.NonSerialized] public List<Room> ItemRooms = new();
 
     public void SpawnFromMap(Map map)
     {
@@ -87,11 +87,7 @@ public class RoomSpawner : MonoBehaviour
                 }
                 else if (entry.Type == MapEntryType.ItemRoom)
                 {
-                    if (ItemRoom)
-                    {
-                        Debug.LogWarning("Multiple item rooms");
-                    }
-                    ItemRoom = room;
+                    ItemRooms.Add(room);
                     room.Contents = RoomContents.Item;
                 }
                 // Normal room

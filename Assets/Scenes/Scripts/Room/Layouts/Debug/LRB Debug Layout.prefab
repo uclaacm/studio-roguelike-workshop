@@ -225,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6825403283022199033, guid: f05fd8437a69ae7c7809903b07ce1ede, type: 3}
       propertyPath: DoorPositions
-      value: 3
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

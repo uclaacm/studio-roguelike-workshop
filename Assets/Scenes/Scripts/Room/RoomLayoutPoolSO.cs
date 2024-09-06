@@ -46,7 +46,7 @@ public class RoomLayoutPoolSO : ScriptableObject {
             }
             layoutIndex -= pool.Count;
         }
-        Debug.LogError("Could not get random layout prefab! (Either there are no layouts, or this is a bug.)");
+        Debug.LogError($"Could not get random layout prefab! (Either there are no layouts, or this is a bug. doorPositions: {doorPositions})");
         return null;
     }
 
