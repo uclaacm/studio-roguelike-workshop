@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class MapGenerator : MonoBehaviour
 {
+    private const float FAIL_CHANCE = 0.5f;
+
     /// <summary>
     /// Generate random map with given parameters. <br></br>
     /// Returns map with between minRooms and maxRooms; failChance determines the chance of stopping early. <br></br>
@@ -28,35 +30,41 @@ public class MapGenerator : MonoBehaviour
                 continue;
             }
             // Save neighboring positions:
-            int neighboringRooms = 0;
             List<Vector2Int> temp = new List<Vector2Int>();
             // Randomize the order which we check neighbors:
             List<Vector2Int> randomizedOffsets = new List<Vector2Int>(NeighborOffsets);
             randomizedOffsets.Shuffle();
             foreach (Vector2Int offset in randomizedOffsets)
             {
+                // A valid neighbor is empty and itself has at most one neighbor:
                 Vector2Int neighbor = current + offset;
-                if (newMap.InBounds(neighbor.x, neighbor.y))
+                if (!newMap.InBounds(neighbor.x, neighbor.y) || !newMap.Get(neighbor.x, neighbor.y).IsEmpty)
                 {
-                    temp.Add(neighbor);
-                    if (!newMap.Get(neighbor.x, neighbor.y).IsEmpty)
+                    continue;
+                }
+                int neighboringRooms = 0;
+                foreach (Vector2Int neighborOffset in NeighborOffsets)
+                {
+                    Vector2Int neighborNeighbor = neighbor + neighborOffset;
+                    if (newMap.InBounds(neighborNeighbor.x, neighborNeighbor.y) && !newMap.Get(neighborNeighbor.x, neighborNeighbor.y).IsEmpty)
                     {
                         neighboringRooms++;
                     }
                 }
-            }
-            // Either skip (too many neighboring rooms) or continue & add them to stack:
-            if (neighboringRooms > 1)
-            {
-                Debug.Log("Skipping room at position (" + current.x + ", " + current.y + ") due to too many neighboring rooms");
-                continue;
-            }
-            else
-            {
-                foreach (Vector2Int element in temp)
+                if (neighboringRooms > 1)
                 {
-                    stack.Push(element);
+                    Debug.Log("Skipping room at position (" + neighbor.x + ", " + neighbor.y + ") due to too many neighboring rooms");
+                    continue;
                 }
+                temp.Add(neighbor);
+            }
+            // Remove a random amount of neighbors, the resulting list should have between [1, Temp.Count):
+            int numToRemove = Random.Range(0, temp.Count);
+            temp.RemoveRange(temp.Count - numToRemove, numToRemove);
+            // Add valid neighbors to stack:
+            foreach (Vector2Int element in temp)
+            {
+                stack.Push(element);
             }
             // End requirements (spawn boss room):
             bool spawnBoss = false;
