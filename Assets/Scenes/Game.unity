@@ -214,11 +214,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &568802714 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 1352911681908152458, guid: 4971175020659bc4ea41e24c9c9deae6, type: 3}
-  m_PrefabInstance: {fileID: 2300686126020756279}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2300686126020756279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -227,18 +222,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1047283160286321719, guid: 4971175020659bc4ea41e24c9c9deae6, type: 3}
-      propertyPath: m_Color.b
-      value: 0.16648854
-      objectReference: {fileID: 0}
-    - target: {fileID: 1047283160286321719, guid: 4971175020659bc4ea41e24c9c9deae6, type: 3}
-      propertyPath: m_Color.g
-      value: 0.16648854
-      objectReference: {fileID: 0}
-    - target: {fileID: 1047283160286321719, guid: 4971175020659bc4ea41e24c9c9deae6, type: 3}
-      propertyPath: m_Color.r
-      value: 0.76729554
-      objectReference: {fileID: 0}
     - target: {fileID: 2441975823005131170, guid: 4971175020659bc4ea41e24c9c9deae6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.13
@@ -283,18 +266,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeleeEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 8134242626436513821, guid: 4971175020659bc4ea41e24c9c9deae6, type: 3}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 5731027669337161369}
+    - target: {fileID: 6539112502260803746, guid: 4971175020659bc4ea41e24c9c9deae6, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 8134242626436513821, guid: 4971175020659bc4ea41e24c9c9deae6, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 5731027669337161369}
-    - target: {fileID: 8134242626436513821, guid: 4971175020659bc4ea41e24c9c9deae6, type: 3}
-      propertyPath: rigidbody
-      value: 
-      objectReference: {fileID: 568802714}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

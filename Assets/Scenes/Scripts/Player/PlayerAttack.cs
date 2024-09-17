@@ -11,6 +11,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] float playerAttackDelay = 0.5f;
     new Camera camera;
     float lastShootTime = 0.0f;
+    bool attackHeld = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,12 +22,7 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    public void OnClick()
-    {
-        if (Time.time - lastShootTime > playerAttackDelay)
+        if (attackHeld && Time.time - lastShootTime > playerAttackDelay)
         {
             lastShootTime = Time.time;
             Vector3 mouseScreenPos = Mouse.current.position.ReadValue();
@@ -43,5 +39,10 @@ public class PlayerAttack : MonoBehaviour
             GameObject bubble = Instantiate(bubblePrefab, transform.position, Quaternion.identity);
             bubble.GetComponent<Rigidbody2D>().velocity = new Vector3(dir.x, dir.y, 0) * shootingSpeed;
         }
+    }
+
+    public void OnClick(InputValue value)
+    {
+        attackHeld = value.isPressed;
     }
 }
