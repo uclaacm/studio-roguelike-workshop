@@ -317,7 +317,8 @@ MonoBehaviour:
   rightWall: {fileID: 5834955339090731071}
   topWall: {fileID: 1943251891873069171}
   bottomWall: {fileID: 3483857201852648602}
-  layoutPool: {fileID: 11400000, guid: 3481b7db878b5ead5b588be1277f59d8, type: 2}
+  normalLayoutPool: {fileID: 11400000, guid: 46522df4f55cc012d95603a18613f8e2, type: 2}
+  bossLayoutPool: {fileID: 11400000, guid: 8922c8bb2adfaba41b3357865013417b, type: 2}
 --- !u!114 &3209971333458447819
 MonoBehaviour:
   m_ObjectHideFlags: 0

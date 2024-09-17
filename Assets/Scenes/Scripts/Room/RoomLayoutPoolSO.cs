@@ -3,7 +3,6 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "RoomLayoutPool", menuName = "Room Layout Pool")]
 public class RoomLayoutPoolSO : ScriptableObject {
-	public DoorPositionMask DoorPositions;
 	public List<GameObject> RoomLayoutPrefabs;
 
 	SortedDictionary<DoorPositionMask, List<GameObject>> layoutsPrefabsByDoorPositions = new();

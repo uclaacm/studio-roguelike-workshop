@@ -36,7 +36,8 @@ public class Room : MonoBehaviour
     [SerializeField] Wall topWall;
     [SerializeField] Wall bottomWall;
 
-    [SerializeField] RoomLayoutPoolSO layoutPool;
+    [SerializeField] RoomLayoutPoolSO normalLayoutPool;
+    [SerializeField] RoomLayoutPoolSO bossLayoutPool;
 
     // Set by RoomSpawner when spawning rooms from a map
     // this is the index in the Map that the room
@@ -57,6 +58,10 @@ public class Room : MonoBehaviour
         topWall.SetDoorEnabled((doorPositions & DoorPositionMask.Top) > 0);
         bottomWall.SetDoorEnabled((doorPositions & DoorPositionMask.Bottom) > 0);
 
+        RoomLayoutPoolSO layoutPool = normalLayoutPool;
+        if(Contents == RoomContents.Boss){
+            layoutPool = bossLayoutPool;
+        }
         var randomLayoutPrefab = layoutPool.GetRandomLayoutPrefab(doorPositions);
         var randomLayoutGO = Instantiate(randomLayoutPrefab, transform);
         Layout = randomLayoutGO.GetComponent<RoomLayout>();

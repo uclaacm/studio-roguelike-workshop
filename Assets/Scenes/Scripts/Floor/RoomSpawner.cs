@@ -49,15 +49,14 @@ public class RoomSpawner : MonoBehaviour
                 );
 
                 var room = roomGO.GetComponent<Room>();
+                room.Location = new(x, y);
+                room.Contents = MapEntryTypeToRoomContents(entry.Type);
                 room.InitializeLayout(
                     (!leftEmpty ? DoorPositionMask.Left : 0)
                     | (!rightEmpty ? DoorPositionMask.Right : 0)
                     | (!topEmpty ? DoorPositionMask.Top : 0)
                     | (!bottomEmpty ? DoorPositionMask.Bottom : 0)
                 );
-
-                room.Location = new(x, y);
-                room.Contents = MapEntryTypeToRoomContents(entry.Type).Value;
 
                 // Debug: show room type:
                 if (room.Layout.Debug)
@@ -99,7 +98,7 @@ public class RoomSpawner : MonoBehaviour
         }
     }
 
-    RoomContents? MapEntryTypeToRoomContents(MapEntryType type)
+    RoomContents MapEntryTypeToRoomContents(MapEntryType type)
     {
         switch (type)
         {
@@ -107,7 +106,9 @@ public class RoomSpawner : MonoBehaviour
             case MapEntryType.StartRoom: return RoomContents.Empty;
             case MapEntryType.ItemRoom: return RoomContents.Item;
             case MapEntryType.NormalRoom: return RoomContents.Normal;
+            default:
+                Debug.LogError($"RoomSpawner: Unknown MapEntryType: {type}");
+                return RoomContents.Normal;
         }
-        return null;
     }
 }
