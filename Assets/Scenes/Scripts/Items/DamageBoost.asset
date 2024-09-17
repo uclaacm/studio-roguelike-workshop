@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: DamageBoost
   m_EditorClassIdentifier: 
   itemName: DamageBoost
-  itemPrefab: {fileID: 0}
-  pickupPrefab: {fileID: 0}
+  itemPrefab: {fileID: 1777422201900875123, guid: 2311b79181d0c4a0ca37f774e49c2218, type: 3}
+  pickupPrefab: {fileID: 1617008803565414692, guid: 2267b19ec6ab9432da9438c58a86a65a, type: 3}
