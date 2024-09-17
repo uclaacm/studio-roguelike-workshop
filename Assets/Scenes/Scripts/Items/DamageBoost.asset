@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ac5a6015dcc495ea89b9758710afcc, type: 3}
+  m_Name: DamageBoost
+  m_EditorClassIdentifier: 
+  itemName: DamageBoost
+  itemPrefab: {fileID: 1777422201900875123, guid: 2311b79181d0c4a0ca37f774e49c2218, type: 3}
+  pickupPrefab: {fileID: 1617008803565414692, guid: 2267b19ec6ab9432da9438c58a86a65a, type: 3}
