@@ -7,9 +7,9 @@ using UnityEngine.InputSystem;
 /// <summary>
 /// Handles melee enemy movement towards the player
 /// </summary>
-public class EnemyMovement : MonoBehaviour
+public class MeleeEnemyMovement : MonoBehaviour
 {
-    
+
     // melee enemy rigidbody
     [SerializeField] public new Rigidbody2D rigidbody;
 
@@ -18,9 +18,6 @@ public class EnemyMovement : MonoBehaviour
 
     // Determining monster detection range
     [SerializeField] public float Range = 5.0f;
-    
-    // player location
-    [SerializeField] public Transform Player;
 
     // enemy distance from player
     float distance;
@@ -28,14 +25,17 @@ public class EnemyMovement : MonoBehaviour
     // the direction from the enemy -> player
     Vector2 direction;
 
-    // For converting the player transform to a 2d vector
-    Vector2 playerPosition;
+    Entity player;
+
+    void Start(){
+        player = Player.Instance;
+    }
 
     // Update is called once per frame
     void Update()
     {
         // Converts player transform to 2d vector
-        playerPosition = new Vector2(Player.position.x, Player.position.y);
+        var playerPosition = new Vector2(player.transform.position.x, player.transform.position.y);
 
         // Finds the distance between the player (player.position) and the enemy (rigidbody.position)
         distance = Vector2.Distance(playerPosition, rigidbody.position);

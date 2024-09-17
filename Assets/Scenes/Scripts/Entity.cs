@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
+using UnityEngine.Events;
 
 public class Entity : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class Entity : MonoBehaviour
 
     public Rigidbody2D rb;
     public EntityStats stats;
+
+    public UnityEvent DeathEvent;
 
     [NonSerialized]
     public float CurrentHealth;
@@ -40,6 +43,7 @@ public class Entity : MonoBehaviour
     private void Die()
     {
         Debug.Log("oof you died");
+        DeathEvent.Invoke();
         Destroy(gameObject);
     }
 }

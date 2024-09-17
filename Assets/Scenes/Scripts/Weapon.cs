@@ -28,6 +28,7 @@ public class Weapon : MonoBehaviour
     // pew pew, called by Enemy or Player Attack scripts
     public void Shoot(Vector2 direction)
     {
+        // if we are not on cooldown
         if (Time.time - lastShotTime > shootingCooldown)
         {
 
@@ -36,11 +37,11 @@ public class Weapon : MonoBehaviour
 
             // Load in a projectile
             GameObject projectile = Instantiate(projectilePrefab, position, Quaternion.identity);
-            ProjectileShootEvent.Invoke();
 
             // Set projectile lifetime and damage
             Projectile projectileScript = projectile.GetComponent<Projectile>();
             projectileScript.setLifetimeAndDamage(projectileLifetime, damage);
+            projectileScript.SourceTag = gameObject.tag;
 
             // give it velocity so it can go pew pew
             projectile.GetComponent<Rigidbody2D>().velocity = new Vector3(direction.x, direction.y, 0) * shootingSpeed;
@@ -48,12 +49,8 @@ public class Weapon : MonoBehaviour
             // reset the last shot time to the current time
             lastShotTime = Time.time;
 
+            ProjectileShootEvent.Invoke();
         }
-        else
-        {
-            Debug.Log("no pew pew, still on cooldown");
-        }
-
     }
 
 }

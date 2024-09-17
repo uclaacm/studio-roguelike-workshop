@@ -331,6 +331,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   room: {fileID: 5976932445550731661}
+  enemyPool: {fileID: 11400000, guid: 0d2e9434f4ce7c5b2a776f1422aab552, type: 2}
+  bossPool: {fileID: 11400000, guid: 7735568477a192df3b7e4ff267fff4d3, type: 2}
 --- !u!1 &7785149359585060070
 GameObject:
   m_ObjectHideFlags: 0

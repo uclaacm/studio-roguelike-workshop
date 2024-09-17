@@ -5,7 +5,7 @@ using UnityEngine;
 public class RoomLayout : MonoBehaviour
 {
     public DoorPositionMask DoorPositions;
-    public List<Transform> EnemySpawnPoints;
+    public Transform EnemySpawnParent;
     public Transform ItemSpawnPoint;
 
     [SerializeField] public bool Debug;

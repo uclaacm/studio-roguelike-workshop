@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &316312860 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7615931143467286684, guid: e35de2553479c7c429b80a0a09cc650c, type: 3}
+  m_PrefabInstance: {fileID: 5731027669337161368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &557368228
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -130,6 +135,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 169048241133967324, guid: 04330651f5b931df197b514cc2f6408a, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 316312860}
     - target: {fileID: 1309709589632059935, guid: 04330651f5b931df197b514cc2f6408a, type: 3}
       propertyPath: m_Name
       value: Floor
