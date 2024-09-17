@@ -20,24 +20,29 @@ class RoomWave : MonoBehaviour {
 	void StartEnemyWave(){
 		room.CloseDoors();
 		foreach(Transform spawnPoint in room.Layout.EnemySpawnParent){
-			SpawnRandomEnemy(spawnPoint);
+			SpawnRandomEnemy(enemyPool, spawnPoint);
 		}
 	}
 
 	void StartBossWave(){
 		room.CloseDoors();
-		// TODO:
+		SpawnRandomEnemy(enemyPool, room.Layout.EnemySpawnParent.GetChild(0));
 	}
 
 	void EndWave(){
 		room.OpenDoors();
+		// TODO: Open portal to next floor
 	}
 
-	void SpawnRandomEnemy(Transform spawnPoint){
+	void SpawnRandomEnemy(EnemyPoolSO pool, Transform spawnPoint){
 		enemiesRemaining++;
 
-		int index = Random.Range(0, enemyPool.EnemyPrefabs.Count - 1);
-		var enemyPrefab = enemyPool.EnemyPrefabs[index];
+		int index = Random.Range(0, pool.EnemyPrefabs.Count - 1);
+		var enemyPrefab = pool.EnemyPrefabs[index];
+		SpawnEnemy(enemyPrefab, spawnPoint);
+	}
+
+	void SpawnEnemy(GameObject enemyPrefab, Transform spawnPoint){
 		var enemyGO = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
 		var enemy = enemyGO.GetComponent<Entity>();
 		enemy.DeathEvent.AddListener(OnEnemyDeath);

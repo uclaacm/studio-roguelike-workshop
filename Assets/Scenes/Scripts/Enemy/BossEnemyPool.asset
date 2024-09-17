@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f9367a47a256dfefb098be2c45d7298, type: 3}
   m_Name: BossEnemyPool
   m_EditorClassIdentifier: 
-  EnemyPrefabs: []
+  EnemyPrefabs:
+  - {fileID: 6539112502260803746, guid: 4971175020659bc4ea41e24c9c9deae6, type: 3}
