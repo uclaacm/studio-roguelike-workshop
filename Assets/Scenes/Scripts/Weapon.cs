@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] public UnityEvent ProjectileShootEvent;
-    
+
     [SerializeField] GameObject projectilePrefab;
     [SerializeField] float shootingSpeed;
     [SerializeField] float shootingCooldown;
@@ -17,7 +17,7 @@ public class Weapon : MonoBehaviour
     float lastShotTime;
 
     float offset = 1.0f;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +32,8 @@ public class Weapon : MonoBehaviour
         {
 
             // offset so you don't take damage from your own bullet
-            Vector3 position = transform.position + new Vector3(direction.x, direction.y, transform.position.y) * offset;
-            
+            Vector3 position = transform.position + new Vector3(direction.x, direction.y, 0) * offset;
+
             // Load in a projectile
             GameObject projectile = Instantiate(projectilePrefab, position, Quaternion.identity);
             ProjectileShootEvent.Invoke();
@@ -57,4 +57,3 @@ public class Weapon : MonoBehaviour
     }
 
 }
-
