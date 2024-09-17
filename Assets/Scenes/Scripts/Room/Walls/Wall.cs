@@ -16,7 +16,6 @@ public class Wall : MonoBehaviour
     bool doorEnabled = false;
 
     public void SetDoorEnabled(bool enabled){
-        if(doorEnabled == enabled) return;
         doorEnabled = enabled;
 
         if (!enabled){
