@@ -7,8 +7,9 @@ using Unity.VisualScripting.Antlr3.Runtime.Misc;
 public class Entity : MonoBehaviour
 {
 
-    [Serializable] 
-    public struct EntityStats {
+    [Serializable]
+    public struct EntityStats
+    {
         public float MaxHealth;
         public float MovementSpeed;
     }
@@ -18,6 +19,11 @@ public class Entity : MonoBehaviour
 
     [NonSerialized]
     public float CurrentHealth;
+
+    private void Start()
+    {
+        CurrentHealth = stats.MaxHealth;
+    }
 
     public void TakeDamage(float damage)
     {
@@ -36,5 +42,4 @@ public class Entity : MonoBehaviour
         Debug.Log("oof you died");
         Destroy(gameObject);
     }
-
 }
