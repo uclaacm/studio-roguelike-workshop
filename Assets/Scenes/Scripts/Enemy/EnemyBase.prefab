@@ -11,11 +11,12 @@ GameObject:
   - component: {fileID: 2441975823005131170}
   - component: {fileID: 1047283160286321719}
   - component: {fileID: 190533765844388974}
-  - component: {fileID: 8134242626436513821}
   - component: {fileID: 1352911681908152458}
   - component: {fileID: 5840969401200209581}
+  - component: {fileID: -2231753703875784538}
+  - component: {fileID: -1364035999663738022}
   m_Layer: 0
-  m_Name: MeleeEnemy
+  m_Name: EnemyBase
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,21 +108,6 @@ MonoBehaviour:
   DeathEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8134242626436513821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6539112502260803746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58596ba6516c8e54a9368ea0e2966772, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rigidbody: {fileID: 1352911681908152458}
-  MovementSpeed: 2
-  Range: 5
 --- !u!50 &1352911681908152458
 Rigidbody2D:
   serializedVersion: 4
@@ -181,7 +167,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.5}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -194,3 +180,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-2231753703875784538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6539112502260803746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c242eea84334b0182a089226fc0c4276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 5
+--- !u!114 &-1364035999663738022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6539112502260803746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8c77fc6e7e8d84cb308b7cb7c16533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProjectileShootEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  projectilePrefab: {fileID: 7547383389920784311, guid: bcf99dbfd7de4436e88e6f91d300c6d3, type: 3}
+  ShootingSpeed: 5
+  ShootingCooldown: 1
+  Damage: 1
+  ProjectileLifetime: 5

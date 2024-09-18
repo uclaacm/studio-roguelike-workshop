@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [SerializeField] float range;
+
+    Weapon weapon;
+
+    void Start(){
+        weapon = GetComponent<Weapon>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Update(){
+        var playerPos = Player.Instance.transform.position;
+        var displacement = playerPos - transform.position;
+        var distance = displacement.magnitude;
+
+        if(distance < range){
+            weapon.Shoot(displacement / distance);
+        }
     }
 }

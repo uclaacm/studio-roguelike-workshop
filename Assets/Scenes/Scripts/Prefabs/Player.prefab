@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 7295048805350958644}
-  movementSpeed: 3
+  MovementSpeed: 3
 --- !u!114 &7094412602196616899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,10 +119,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   projectilePrefab: {fileID: 7547383389920784311, guid: bcf99dbfd7de4436e88e6f91d300c6d3, type: 3}
-  shootingSpeed: 5
-  shootingCooldown: 1
-  damage: 1
-  projectileLifetime: 5
+  ShootingSpeed: 5
+  ShootingCooldown: 1
+  Damage: 1
+  ProjectileLifetime: 5
 --- !u!212 &7725347971992770342
 SpriteRenderer:
   m_ObjectHideFlags: 0
