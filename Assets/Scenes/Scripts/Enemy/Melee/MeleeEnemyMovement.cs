@@ -34,6 +34,8 @@ public class MeleeEnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // if player is dead, do nothing
+        if(!player) return;
         // Converts player transform to 2d vector
         var playerPosition = new Vector2(player.transform.position.x, player.transform.position.y);
 

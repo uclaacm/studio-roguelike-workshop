@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1617008803565414692, guid: 3e5b78b0fcb4d09008eeeaee2eb06bef, type: 3}
       propertyPath: m_Name
-      value: ItemPickupBase
+      value: DamageBoostPickup
       objectReference: {fileID: 0}
     - target: {fileID: 4348338348670315928, guid: 3e5b78b0fcb4d09008eeeaee2eb06bef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8217684950636357656, guid: 3e5b78b0fcb4d09008eeeaee2eb06bef, type: 3}
+      propertyPath: itemSO
+      value: 
+      objectReference: {fileID: 11400000, guid: e60bb320b198f45af994490efa755500, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

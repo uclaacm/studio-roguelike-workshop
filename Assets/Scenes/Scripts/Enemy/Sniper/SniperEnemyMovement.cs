@@ -18,6 +18,8 @@ public class SniperEnemyMovement : MonoBehaviour
     }
 
     void Update(){
+        // if player is dead, do nothing
+        if(Player.IsDead) return;
         var playerPos = Player.Instance.transform.position;
         var displacement = playerPos - transform.position;
         var distance = displacement.magnitude;
