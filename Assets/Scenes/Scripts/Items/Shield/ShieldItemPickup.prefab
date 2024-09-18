@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8217684950636357656}
   - component: {fileID: 6517365778383794468}
   m_Layer: 0
-  m_Name: DamageBoostItemPickup
+  m_Name: ShieldItemPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 354dcbc77779947bcbe52697d1f99bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSO: {fileID: 11400000, guid: e60bb320b198f45af994490efa755500, type: 2}
+  itemSO: {fileID: 11400000, guid: 6a296719b883a6a18938c4a75a86f28b, type: 2}
 --- !u!58 &6517365778383794468
 CircleCollider2D:
   m_ObjectHideFlags: 0

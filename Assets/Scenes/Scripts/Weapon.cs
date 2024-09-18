@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] public UnityEvent ProjectileShootEvent;
+    [SerializeField] public UnityEvent<Projectile> ProjectileShootEvent;
 
     [SerializeField] GameObject projectilePrefab;
     [SerializeField] float shootingSpeed;
@@ -49,7 +49,7 @@ public class Weapon : MonoBehaviour
             // reset the last shot time to the current time
             lastShotTime = Time.time;
 
-            ProjectileShootEvent.Invoke();
+            ProjectileShootEvent.Invoke(projectileScript);
         }
     }
 

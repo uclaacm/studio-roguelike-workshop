@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 /// <summary>
-/// Handles player input in <see cref="OnMove(UnityEngine.InputSystem.InputValue)"/> 
+/// Handles player input in <see cref="OnMove(UnityEngine.InputSystem.InputValue)"/>
 /// to move the character through applying a velocity to <see cref="rigidbody"/>
 /// </summary>
 public class PlayerMovement : MonoBehaviour
@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     /// <summary>
     /// This is used to scale the <see cref="Rigidbody2D.velocity"/>
     /// </summary>
-    [SerializeField] float movementSpeed = 3.0f;
+    [SerializeField] public float MovementSpeed = 3.0f;
 
     /// <summary>
     /// <para>
@@ -29,11 +29,11 @@ public class PlayerMovement : MonoBehaviour
     /// </para>
     /// <para>
     /// The function changes the velocity of the <see cref="rigidbody"/> to point in the direction of the input
-    /// at speed <see cref="movementSpeed"/>.
+    /// at speed <see cref="MovementSpeed"/>.
     /// </para>
     /// </summary>
     public void OnMove(InputValue inputValue)
     {
-        rigidbody.velocity = inputValue.Get<Vector2>() * movementSpeed;
+        rigidbody.velocity = inputValue.Get<Vector2>() * MovementSpeed;
     }
 }

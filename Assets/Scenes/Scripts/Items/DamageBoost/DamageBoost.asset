@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30ac5a6015dcc495ea89b9758710afcc, type: 3}
   m_Name: DamageBoost
   m_EditorClassIdentifier: 
-  itemName: DamageBoost
+  itemName: Damage Boost
   itemPrefab: {fileID: 1777422201900875123, guid: 2311b79181d0c4a0ca37f774e49c2218, type: 3}
-  pickupPrefab: {fileID: 1617008803565414692, guid: 2267b19ec6ab9432da9438c58a86a65a, type: 3}
+  pickupPrefab: {fileID: 3183556703215481694, guid: e7bd93e8d19f862b182d41f1746bc41a, type: 3}
