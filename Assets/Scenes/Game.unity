@@ -353,6 +353,58 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 308331166681276730, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999662182709346370, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999662182709346370, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999662182709346370, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999662182709346370, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999662182709346370, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999662182709346370, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999662182709346370, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683442934754905892, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683442934754905892, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683442934754905892, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683442934754905892, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683442934754905892, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5923671005654997018, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -436,6 +488,42 @@ PrefabInstance:
     - target: {fileID: 6690758602193585393, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114758129547529022, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114758129547529022, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114758129547529022, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114758129547529022, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114758129547529022, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114758129547529022, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114758129547529022, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153253724815083480, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153253724815083480, guid: e5ead4ba6e80f6aadb78c26a7ba665c6, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
