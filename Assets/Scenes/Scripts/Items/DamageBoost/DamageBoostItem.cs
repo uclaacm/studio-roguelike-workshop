@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class DamageBoostItem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] float damageMult = 1.2f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Start(){
+        var weapon = transform.parent.GetComponent<Weapon>();
+        if(weapon){
+            weapon.Damage *= damageMult;
+        }
     }
 }

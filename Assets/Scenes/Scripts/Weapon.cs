@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] GameObject projectilePrefab;
     [SerializeField] float shootingSpeed;
     [SerializeField] float shootingCooldown;
-    [SerializeField] float damage;
+    [SerializeField] public float Damage;
     [SerializeField] float projectileLifetime;
 
     float lastShotTime;
@@ -40,7 +40,7 @@ public class Weapon : MonoBehaviour
 
             // Set projectile lifetime and damage
             Projectile projectileScript = projectile.GetComponent<Projectile>();
-            projectileScript.setLifetimeAndDamage(projectileLifetime, damage);
+            projectileScript.setLifetimeAndDamage(projectileLifetime, Damage);
             projectileScript.SourceTag = gameObject.tag;
 
             // give it velocity so it can go pew pew
