@@ -23,6 +23,11 @@ public class Entity : MonoBehaviour
     [NonSerialized]
     public float CurrentHealth;
 
+    // this is used to prevent "multiple deaths" in one frame
+    // which can happen if multiple projectiles
+    // hit in one frame
+    bool dead = false;
+
     private void Start()
     {
         CurrentHealth = stats.MaxHealth;
@@ -30,6 +35,7 @@ public class Entity : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if(dead) return;
 
         CurrentHealth -= damage;
         Debug.Log("Ouch");
@@ -42,8 +48,8 @@ public class Entity : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("oof you died");
         DeathEvent.Invoke();
+        dead = true;
         Destroy(gameObject);
     }
 }
