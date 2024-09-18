@@ -31,7 +31,7 @@ class RoomWave : MonoBehaviour {
 
 	void EndWave(){
 		room.OpenDoors();
-		// TODO: Open portal to next floor
+		// TODO: Open portal to next floor if boss room
 	}
 
 	void SpawnRandomEnemy(EnemyPoolSO pool, Transform spawnPoint){
