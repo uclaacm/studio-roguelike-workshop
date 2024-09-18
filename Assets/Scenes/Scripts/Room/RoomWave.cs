@@ -26,7 +26,7 @@ class RoomWave : MonoBehaviour {
 
 	void StartBossWave(){
 		room.CloseDoors();
-		SpawnRandomEnemy(enemyPool, room.Layout.EnemySpawnParent.GetChild(0));
+		SpawnRandomEnemy(bossPool, room.Layout.EnemySpawnParent.GetChild(0));
 	}
 
 	void EndWave(){
@@ -37,7 +37,7 @@ class RoomWave : MonoBehaviour {
 	void SpawnRandomEnemy(EnemyPoolSO pool, Transform spawnPoint){
 		enemiesRemaining++;
 
-		int index = Random.Range(0, pool.EnemyPrefabs.Count - 1);
+		int index = Random.Range(0, pool.EnemyPrefabs.Count);
 		var enemyPrefab = pool.EnemyPrefabs[index];
 		SpawnEnemy(enemyPrefab, spawnPoint);
 	}
