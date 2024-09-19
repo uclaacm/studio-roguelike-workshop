@@ -21,16 +21,16 @@ public class Floor : MonoBehaviour
 
     public void Restart()
     {
-        // Restart current floor. Destroys player. I don't know how future scenes will be futureproofed so I'm putting in destroy and instantiation lines.
-        Destroy(player);
+        // Restart current floor. Destroys player.
         sceneTransition.ReloadScene();
-
     }
 
     public void GoToNext()
     {
         // Restart current floor. DO NOT reset player.
         DontDestroyOnLoad(player);
+        //DontDestroyOnLoad(camera);
         sceneTransition.LoadScene("Game");
+        player.transform.position = roomSpawner.StartRoom.transform.position; // The player won't reset to the spawn room without this line despite this line already being in Start().
     }
 }
