@@ -6,6 +6,7 @@ public class Floor : MonoBehaviour
     [SerializeField] Map debugMap;
     [SerializeField] Map randomMap;
     [SerializeField] GameObject player;
+    [SerializeField] SceneTransition sceneTransition;
 
     void Start()
     {
