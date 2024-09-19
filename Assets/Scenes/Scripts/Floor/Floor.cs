@@ -30,12 +30,6 @@ public class Floor : MonoBehaviour
     public void GoToNext()
     {
         // Restart current floor. DO NOT reset player.
-        // TODO: Make gameobject that calls this function.
-        GameObject oldPlayer = player; //Save old character, reload scene and replace default character with upgraded character. 
-        sceneTransition.ReloadScene();
-        Destroy(player);
-        player = oldPlayer; //load old player data into player
-        Instantiate(player);
-        player.transform.position = roomSpawner.StartRoom.transform.position;
+
     }
 }
