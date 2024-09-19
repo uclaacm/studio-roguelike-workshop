@@ -30,6 +30,7 @@ public class Floor : MonoBehaviour
     public void GoToNext()
     {
         // Restart current floor. DO NOT reset player.
-
+        DontDestroyOnLoad(player);
+        sceneTransition.LoadScene("Game");
     }
 }

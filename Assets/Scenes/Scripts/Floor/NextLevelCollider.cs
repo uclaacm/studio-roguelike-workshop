@@ -24,8 +24,7 @@ public class NextLevelCollider : MonoBehaviour
         Debug.Log("NextLevelCollider Trigger activated!");
         if (collision.gameObject.tag == "Player")
         {
-            //floor.GoToNext();
-            floor.Restart();
+            floor.GoToNext();
         }
     }
 }
