@@ -280,7 +280,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6753733388322234412}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7594366888286369642}
+        m_TargetAssemblyTypeName: GameOverUI, Assembly-CSharp
+        m_MethodName: OnExitToMenuPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &2086243934774567285
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -331,7 +343,7 @@ GameObject:
   - component: {fileID: 7182996046667579900}
   - component: {fileID: 8660232309514873844}
   m_Layer: 5
-  m_Name: RestartText
+  m_Name: ExitToMenuText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -528,6 +540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adc6541279add462fbdbe7c42da2b60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuScene: Menu
 --- !u!114 &8408309798554898234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,7 +640,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8538993374236222974}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7594366888286369642}
+        m_TargetAssemblyTypeName: GameOverUI, Assembly-CSharp
+        m_MethodName: OnRestartPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &3357081229168113932
 CanvasRenderer:
   m_ObjectHideFlags: 0

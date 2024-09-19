@@ -28,6 +28,10 @@ public class SceneTransition : MonoBehaviour
         animator.SetTrigger("transition_in");
     }
 
+    public void ReloadScene(){
+        LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void SceneTransitionReady(){
         asyncOperation.completed += SceneTransitionComplete;
         asyncOperation.allowSceneActivation = true;

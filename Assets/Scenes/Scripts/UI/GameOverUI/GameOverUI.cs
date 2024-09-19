@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameOverUI : MonoBehaviour
 {
+    [SerializeField] string menuScene = "Menu";
+
     Canvas canvas;
 
     void Start(){
@@ -15,5 +17,13 @@ public class GameOverUI : MonoBehaviour
 
     void OnPlayerDeath(){
         canvas.enabled = true;
+    }
+
+    public void OnRestartPressed(){
+        SceneTransition.Instance.ReloadScene();
+    }
+
+    public void OnExitToMenuPressed(){
+        SceneTransition.Instance.LoadScene(menuScene);
     }
 }
