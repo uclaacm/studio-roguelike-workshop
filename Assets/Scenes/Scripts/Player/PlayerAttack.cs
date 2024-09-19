@@ -15,6 +15,9 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
+        if(PauseMenuUI.isPaused){
+            return;
+        }
         if (attackHeld)
         {
             Vector3 mouseScreenPos = Mouse.current.position.ReadValue();
@@ -31,6 +34,9 @@ public class PlayerAttack : MonoBehaviour
 
     public void OnClick(InputValue value)
     {
+        if(PauseMenuUI.isPaused){
+            return;
+        }
         attackHeld = value.isPressed;
     }
 }

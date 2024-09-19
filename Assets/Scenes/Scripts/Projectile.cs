@@ -8,10 +8,13 @@ public class Projectile : MonoBehaviour
 
     // This is the type of entity that created the projectile.
     // The projectile is allowed to pass through this entity
-    [System.NonSerialized] public string SourceTag;
+    [SerializeField] public string SourceTag;
 
-    float lifeTime = 5.0f;
-    float damage = 1f;
+
+    // Note: everything that is serialized
+    // is required in *copies* of a projectile
+    [SerializeField] float LifeTime = 5.0f;
+    [SerializeField] float Damage = 1f;
     float startTime;
 
     // Start is called before the first frame update
@@ -23,24 +26,24 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time - startTime > lifeTime)
+        if (Time.time - startTime > LifeTime)
             Destroy(gameObject);
     }
 
     public void setLifetime(float weaponLifetime)
     {
-        lifeTime = weaponLifetime;
+        LifeTime = weaponLifetime;
     }
 
     public void setDamage(float weaponDamage)
     {
-        damage = weaponDamage;
+        Damage = weaponDamage;
     }
 
     public void setLifetimeAndDamage(float weaponLifetime, float weaponDamage)
     {
-        lifeTime = weaponLifetime;
-        damage = weaponDamage;
+        LifeTime = weaponLifetime;
+        Damage = weaponDamage;
     }
 
     // this function is called when another object enters the projectile's collider
@@ -59,7 +62,7 @@ public class Projectile : MonoBehaviour
             Entity entity = other.GetComponent<Entity>();
             // if what we hit is an entity
             if(entity){
-                entity.TakeDamage(damage);
+                entity.TakeDamage(Damage);
             }
             Destroy(gameObject);
         }
