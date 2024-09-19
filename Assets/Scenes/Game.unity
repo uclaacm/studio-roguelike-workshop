@@ -219,6 +219,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63700c705a49d3b1892f59f912ddd11, type: 3}
+--- !u!114 &259398058 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1629823266849540891, guid: c63700c705a49d3b1892f59f912ddd11, type: 3}
+  m_PrefabInstance: {fileID: 259398057}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e0f841c245b8dfda8c3b3a99d0e37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &316312860 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7615931143467286684, guid: e35de2553479c7c429b80a0a09cc650c, type: 3}
@@ -236,6 +247,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 316312860}
+    - target: {fileID: 169048241133967324, guid: 04330651f5b931df197b514cc2f6408a, type: 3}
+      propertyPath: sceneTransition
+      value: 
+      objectReference: {fileID: 259398058}
     - target: {fileID: 1309709589632059935, guid: 04330651f5b931df197b514cc2f6408a, type: 3}
       propertyPath: m_Name
       value: Floor
