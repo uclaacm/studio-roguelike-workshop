@@ -15,4 +15,18 @@ public class Floor : MonoBehaviour
         roomSpawner.SpawnFromMap(randomMap);
         player.transform.position = roomSpawner.StartRoom.transform.position;
     }
+
+    void Restart()
+    {
+        // Restart current floor. Destroys player.
+
+    }
+
+    void GoToNext()
+    {
+        // Restart current floor. Don't reset player.
+        // TODO: Make gameobject that calls this function.
+
+    }
+
 }
