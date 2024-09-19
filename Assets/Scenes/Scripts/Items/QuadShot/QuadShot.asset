@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ac5a6015dcc495ea89b9758710afcc, type: 3}
+  m_Name: QuadShot
+  m_EditorClassIdentifier: 
+  itemName: Triple Shot
+  itemPrefab: {fileID: 1777422201900875123, guid: b9888794e79922e19a54574d7e631f81, type: 3}
+  pickupPrefab: {fileID: 4296795091466951516, guid: 6b4fa1ed241316e35bf34573734fe3b2, type: 3}

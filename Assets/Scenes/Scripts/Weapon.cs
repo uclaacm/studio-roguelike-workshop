@@ -31,12 +31,8 @@ public class Weapon : MonoBehaviour
         // if we are not on cooldown
         if (Time.time - lastShotTime > ShootingCooldown)
         {
-
-            // offset so you don't take damage from your own bullet
-            Vector3 position = transform.position + new Vector3(direction.x, direction.y, 0) * offset;
-
             // Load in a projectile
-            GameObject projectile = Instantiate(projectilePrefab, position, Quaternion.identity);
+            GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
 
             // Set projectile lifetime and damage
             Projectile projectileScript = projectile.GetComponent<Projectile>();
