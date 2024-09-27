@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Triple Shot
   itemPrefab: {fileID: 1777422201900875123, guid: ab42c94ec2f4ee9f0aef1bfe17dcac49, type: 3}
-  pickupPrefab: {fileID: 1617008803565414692, guid: 288d12fd7e3a38e67b30941a8a7df34e, type: 3}
+  pickupPrefab: {fileID: 4947852416781080132, guid: e548f8c4fd6f48964bd88c34bf4f4756, type: 3}
