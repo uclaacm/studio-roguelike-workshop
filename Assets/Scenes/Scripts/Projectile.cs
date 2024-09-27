@@ -13,8 +13,8 @@ public class Projectile : MonoBehaviour
 
     // Note: everything that is serialized
     // is required in *copies* of a projectile
-    [SerializeField] float LifeTime = 5.0f;
-    [SerializeField] float Damage = 1f;
+    [SerializeField] public float LifeTime = 5.0f;
+    [SerializeField] public float Damage = 1f;
     float startTime;
 
     // Start is called before the first frame update

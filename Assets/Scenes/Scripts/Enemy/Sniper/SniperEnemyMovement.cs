@@ -8,13 +8,14 @@ using UnityEngine;
 /// </summary>
 public class SniperEnemyMovement : MonoBehaviour
 {
-    [SerializeField] float speed = 1;
     [SerializeField] float backOffRange = 8;
 
+    Entity entity;
     Rigidbody2D rb;
 
     void Start(){
         rb = GetComponent<Rigidbody2D>();
+        entity = GetComponent<Entity>();
     }
 
     void Update(){
@@ -25,7 +26,7 @@ public class SniperEnemyMovement : MonoBehaviour
         var distance = displacement.magnitude;
 
         if(distance < backOffRange){
-            rb.velocity = -displacement / distance * speed;
+            rb.velocity = -displacement / distance * entity.stats.MovementSpeed;
         }
         else {
             rb.velocity = Vector2.zero;

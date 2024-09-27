@@ -11,7 +11,7 @@ public class ItemPickup : MonoBehaviour
         if (other.tag == "Player")
         {
             Instantiate(itemSO.itemPrefab, other.gameObject.transform);
-
+            ItemNotificationUI.Instance.ShowPickupNotification(itemSO);
             Destroy(gameObject);
         }
     }

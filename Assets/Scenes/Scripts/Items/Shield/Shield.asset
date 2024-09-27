@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30ac5a6015dcc495ea89b9758710afcc, type: 3}
   m_Name: Shield
   m_EditorClassIdentifier: 
-  itemName: Triple Shot
+  itemName: Shield
   itemPrefab: {fileID: 1777422201900875123, guid: ab42c94ec2f4ee9f0aef1bfe17dcac49, type: 3}
   pickupPrefab: {fileID: 4947852416781080132, guid: e548f8c4fd6f48964bd88c34bf4f4756, type: 3}

@@ -16,10 +16,11 @@ public class PlayerMovement : MonoBehaviour
     /// </remarks>
     [SerializeField] new Rigidbody2D rigidbody;
 
-    /// <summary>
-    /// This is used to scale the <see cref="Rigidbody2D.velocity"/>
-    /// </summary>
-    [SerializeField] public float MovementSpeed = 3.0f;
+    Entity entity;
+
+    void Start(){
+        entity = GetComponent<Entity>();
+    }
 
     /// <summary>
     /// <para>
@@ -34,6 +35,6 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     public void OnMove(InputValue inputValue)
     {
-        rigidbody.velocity = inputValue.Get<Vector2>() * MovementSpeed;
+        rigidbody.velocity = inputValue.Get<Vector2>() * entity.stats.MovementSpeed;
     }
 }

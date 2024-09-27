@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5840969401200209581}
   - component: {fileID: -2231753703875784538}
   - component: {fileID: -1364035999663738022}
+  - component: {fileID: -8352398147481313335}
   m_Layer: 0
   m_Name: EnemyBase
   m_TagString: Enemy
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -3455860944406331723, guid: d9e3b379541b3344da85245ecb57493d, type: 3}
-  m_Color: {r: 0.76729554, g: 0.16648854, b: 0.16648854, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -193,6 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 5
+  initialAttackDelay: 2
 --- !u!114 &-1364035999663738022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,3 +215,18 @@ MonoBehaviour:
   ShootingCooldown: 1
   Damage: 1
   ProjectileLifetime: 5
+--- !u!114 &-8352398147481313335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6539112502260803746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a79b062ba622c097aac41e0ea6574d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1352911681908152458}
+  animator: {fileID: 0}
+  leftRightBiasDegrees: 0

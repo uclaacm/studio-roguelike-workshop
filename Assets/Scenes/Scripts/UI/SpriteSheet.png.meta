@@ -294,7 +294,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 6, y: 6, z: 6, w: 6}
       outline: []
       physicsShape: []
@@ -315,7 +315,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 6, y: 6, z: 6, w: 6}
       outline: []
       physicsShape: []
@@ -336,7 +336,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 6, y: 6, z: 6, w: 6}
       outline: []
       physicsShape: []
@@ -344,6 +344,27 @@ TextureImporter:
       bones: []
       spriteID: e3c35d9ed2362ac959c3cd2faa075057
       internalID: -1900001672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banner_primary
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 9, y: 5, z: 9, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bab1f28fa09240ba9ceb80f26937227
+      internalID: 289767359
       vertices: []
       indices: 
       edges: []
@@ -359,6 +380,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      banner_primary: 289767359
       button_primary: 785643568
       button_primary_hover: -649346389
       button_primary_pressed: -107824312

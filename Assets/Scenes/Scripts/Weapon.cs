@@ -16,7 +16,7 @@ public class Weapon : MonoBehaviour
 
     float lastShotTime;
 
-    float offset = 1.0f;
+    float offset = 0.5f;
 
     // Start is called before the first frame update
     void Start()

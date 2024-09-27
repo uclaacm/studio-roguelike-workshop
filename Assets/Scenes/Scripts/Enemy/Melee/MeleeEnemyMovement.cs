@@ -13,9 +13,6 @@ public class MeleeEnemyMovement : MonoBehaviour
     // melee enemy rigidbody
     [SerializeField] public new Rigidbody2D rigidbody;
 
-    // Used to determine movement speed
-    [SerializeField] public float MovementSpeed = 2.0f;
-
     // Determining monster detection range
     [SerializeField] public float Range = 5.0f;
 
@@ -26,9 +23,11 @@ public class MeleeEnemyMovement : MonoBehaviour
     Vector2 direction;
 
     Entity player;
+    Entity entity;
 
     void Start(){
         player = Player.Instance;
+        entity = GetComponent<Entity>();
     }
 
     // Update is called once per frame
@@ -50,7 +49,7 @@ public class MeleeEnemyMovement : MonoBehaviour
             direction = (playerPosition - rigidbody.position).normalized;
 
             // changes enemy velocity to point in the right direction scaled by MovementSpeed
-            rigidbody.velocity = direction * MovementSpeed;
+            rigidbody.velocity = direction * entity.stats.MovementSpeed;
         } else
         {
             // if the player isn't in range, the enemy stops moving

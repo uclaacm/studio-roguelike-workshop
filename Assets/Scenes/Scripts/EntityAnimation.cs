@@ -14,6 +14,7 @@ public class EntityAnimation : MonoBehaviour
     const int DIR_RIGHT = 3;
 
     void FixedUpdate(){
+        if(!animator) return;
         if(rb.velocity == Vector2.zero){
             animator.SetBool("Walking", false);
         }

@@ -20,12 +20,12 @@ public class DashItem : MonoBehaviour
     Vector2 dashEndDir;
     float lastDashTime = float.NegativeInfinity;
 
+    Entity entity;
     Rigidbody2D rb;
-    float baseSpeed;
 
     void Awake(){
+        entity = transform.parent.GetComponent<Entity>();
         rb = transform.parent.GetComponent<Rigidbody2D>();
-        baseSpeed = transform.parent.GetComponent<PlayerMovement>().MovementSpeed;
     }
 
     void OnMove(InputValue value) {
@@ -49,7 +49,7 @@ public class DashItem : MonoBehaviour
                 StopDash();
             }
             else {
-                rb.velocity = dashDir * baseSpeed * dashSpeedMult;
+                rb.velocity = dashDir * entity.stats.MovementSpeed * dashSpeedMult;
             }
         }
     }
@@ -63,7 +63,7 @@ public class DashItem : MonoBehaviour
 
     void StopDash(){
         dashing = false;
-        rb.velocity = dashEndDir * baseSpeed;
+        rb.velocity = dashEndDir * entity.stats.MovementSpeed;
         lastDashTime = Time.time;
     }
 }

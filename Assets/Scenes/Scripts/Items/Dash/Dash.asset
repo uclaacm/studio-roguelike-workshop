@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30ac5a6015dcc495ea89b9758710afcc, type: 3}
   m_Name: Dash
   m_EditorClassIdentifier: 
-  itemName: Triple Shot
-  itemPrefab: {fileID: 1777422201900875123, guid: 213cec551f73e3b7b96242662cb9ba00, type: 3}
+  itemName: Dash
+  itemPrefab: {fileID: 1777422201900875123, guid: c15c97ca20b3a5d85a50575e4f9a5a4e, type: 3}
   pickupPrefab: {fileID: 2148558613359751135, guid: 7931d0fd821aed81c9bdb8e8da358e05, type: 3}

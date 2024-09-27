@@ -15,3 +15,4 @@ MonoBehaviour:
   EnemyPrefabs:
   - {fileID: 8427128814846987572, guid: b1485ab4d57f5d7218e60dc2bf60474f, type: 3}
   - {fileID: 5048110942589723072, guid: 1df1fa5ff45954988bddd7cf61262b16, type: 3}
+  - {fileID: 8427128814846987572, guid: 89155ffc5006b534fb9d18ff3a9f378b, type: 3}

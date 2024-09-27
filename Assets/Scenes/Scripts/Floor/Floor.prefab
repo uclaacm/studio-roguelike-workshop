@@ -59,7 +59,10 @@ MonoBehaviour:
     - Type: 0
     - Type: 0
     - Type: 4
-  player: {fileID: 0}
+  randomMap:
+    Width: 0
+    Height: 0
+    Entries: []
 --- !u!114 &4117245813222764885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,4 +76,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomPrefab: {fileID: 5976932445550731661, guid: b41562d1e119f3655adf4873336bebaa, type: 3}
-  stride: {x: 24, y: 18}
+  stride: {x: 18, y: 10}

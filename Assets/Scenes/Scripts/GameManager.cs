@@ -25,7 +25,9 @@ public class GameManager : MonoBehaviour
 
     void DestroyPersistentObjects(){
         var activeScene = SceneManager.GetActiveScene();
-        SceneManager.MoveGameObjectToScene(Player.Instance.gameObject, activeScene);
+        if(Player.Instance){
+            SceneManager.MoveGameObjectToScene(Player.Instance.gameObject, activeScene);
+        }
         SceneManager.MoveGameObjectToScene(GameplayUI.Instance.gameObject, activeScene);
         SceneManager.MoveGameObjectToScene(gameObject, activeScene);
     }
