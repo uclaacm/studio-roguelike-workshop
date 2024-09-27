@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAnimation : MonoBehaviour
+public class EntityAnimation : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Animator animator;
