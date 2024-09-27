@@ -26,7 +26,7 @@ public class MapGenerator : MonoBehaviour
             // Check if room already exists:
             if (!newMap.Get(current.x, current.y).IsEmpty)
             {
-                Debug.Log("Skipping existing room at position (" + current.x + ", " + current.y + ")");
+                // Debug.Log("Skipping existing room at position (" + current.x + ", " + current.y + ")");
                 continue;
             }
             // Save neighboring positions:
@@ -53,7 +53,7 @@ public class MapGenerator : MonoBehaviour
                 }
                 if (neighboringRooms > 1)
                 {
-                    Debug.Log("Skipping room at position (" + neighbor.x + ", " + neighbor.y + ") due to too many neighboring rooms");
+                    // Debug.Log("Skipping room at position (" + neighbor.x + ", " + neighbor.y + ") due to too many neighboring rooms");
                     continue;
                 }
                 temp.Add(neighbor);
@@ -71,13 +71,13 @@ public class MapGenerator : MonoBehaviour
             if (numRooms >= maxRooms - 1)
             {
                 // Max room requirement:
-                Debug.Log("Reached maximum number of rooms, spawning boss");
+                // Debug.Log("Reached maximum number of rooms, spawning boss");
                 spawnBoss = true;
             }
             if (numRooms >= minRooms - 1 && Random.value < failChance)
             {
                 // Min room requirement:
-                Debug.Log("Spawning boss early due to fail chance");
+                // Debug.Log("Spawning boss early due to fail chance");
                 spawnBoss = true;
             }
 
@@ -86,19 +86,19 @@ public class MapGenerator : MonoBehaviour
             if (firstRoom)
             {
                 newMap.Get(current.x, current.y).Type = MapEntryType.StartRoom;
-                Debug.Log("Added start room at position (" + current.x + ", " + current.y + ")");
+                // Debug.Log("Added start room at position (" + current.x + ", " + current.y + ")");
             }
             else if (spawnBoss)
             {
                 newMap.Get(current.x, current.y).Type = MapEntryType.BossRoom;
-                Debug.Log("Added boss room at position (" + current.x + ", " + current.y + ")");
+                // Debug.Log("Added boss room at position (" + current.x + ", " + current.y + ")");
                 break;
             }
             else
             {
                 MapEntryType type = (Random.value < itemChance) ? MapEntryType.ItemRoom : MapEntryType.NormalRoom;
                 newMap.Get(current.x, current.y).Type = type;
-                Debug.Log("Added " + type.ToString() + " room at position (" + current.x + ", " + current.y + ")");
+                // Debug.Log("Added " + type.ToString() + " room at position (" + current.x + ", " + current.y + ")");
             }
             numRooms++;
         }

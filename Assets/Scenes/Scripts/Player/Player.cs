@@ -6,9 +6,10 @@ public class Player : MonoBehaviour {
 	public static bool IsDead => !Instance;
 
 	void Awake(){
+		Debug.Log($"AWAKE: {gameObject.GetInstanceID()}");
 		if(Instance){
-			Debug.LogError("Multiple player instances!");
 			Destroy(gameObject);
+			return;
 		}
 		Instance = GetComponent<Entity>();
 	}

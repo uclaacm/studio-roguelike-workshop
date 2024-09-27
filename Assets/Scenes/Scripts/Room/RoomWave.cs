@@ -4,6 +4,7 @@ class RoomWave : MonoBehaviour {
 	[SerializeField] Room room;
 	[SerializeField] EnemyPoolSO enemyPool;
 	[SerializeField] EnemyPoolSO bossPool;
+	[SerializeField] GameObject portalPrefab;
 
 	int enemiesRemaining = 0;
 
@@ -31,7 +32,9 @@ class RoomWave : MonoBehaviour {
 
 	void EndWave(){
 		room.OpenDoors();
-		// TODO: Open portal to next floor if boss room
+		if(room.Contents == RoomContents.Boss) {
+			Instantiate(portalPrefab, transform.position, Quaternion.identity);
+		}
 	}
 
 	void SpawnRandomEnemy(EnemyPoolSO pool, Transform spawnPoint){

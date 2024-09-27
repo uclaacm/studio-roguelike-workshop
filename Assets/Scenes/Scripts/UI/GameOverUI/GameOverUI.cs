@@ -20,10 +20,10 @@ public class GameOverUI : MonoBehaviour
     }
 
     public void OnRestartPressed(){
-        SceneTransition.Instance.ReloadScene();
+        GameManager.Instance.Restart();
     }
 
     public void OnExitToMenuPressed(){
-        SceneTransition.Instance.LoadScene(menuScene);
+        GameManager.Instance.GoToMenu();
     }
 }

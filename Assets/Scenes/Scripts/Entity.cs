@@ -38,7 +38,6 @@ public class Entity : MonoBehaviour
         if(dead) return;
 
         CurrentHealth -= damage;
-        Debug.Log("Ouch");
 
         if (CurrentHealth <= 0)
         {

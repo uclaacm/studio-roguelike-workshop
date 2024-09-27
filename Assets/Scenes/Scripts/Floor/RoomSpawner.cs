@@ -38,10 +38,7 @@ public class RoomSpawner : MonoBehaviour
                 bool topEmpty = y == 0 || map.Get(x, y - 1).IsEmpty;
                 bool bottomEmpty = y == map.Height - 1 || map.Get(x, y + 1).IsEmpty;
 
-                var roomGO = Instantiate(
-                    roomPrefab.gameObject,
-                    transform
-                );
+                var roomGO = Instantiate(roomPrefab.gameObject);
 
                 roomGO.transform.position = new Vector2(
                     stride.x * x,

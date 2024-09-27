@@ -1,36 +1,40 @@
 using System.Data;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Floor : MonoBehaviour
 {
+    public static Floor Instance;
+
     [SerializeField] RoomSpawner roomSpawner;
     [SerializeField] Map debugMap;
     [SerializeField] Map randomMap;
-    [SerializeField] GameObject player;
-    [SerializeField] SceneTransition sceneTransition;
+
+    GameObject player;
+
+    void Awake(){
+        Instance = this;
+    }
 
     void Start()
     {
-        // TODO: Replace with proc. gen map
-        //roomSpawner.SpawnFromMap(debugMap);
+        player = Player.Instance.gameObject;
         randomMap = MapGenerator.RandomMap(10, 10, 10, 20, 0.2f, 0.2f);
         roomSpawner.SpawnFromMap(randomMap);
         player.transform.position = roomSpawner.StartRoom.transform.position;
+        Player.Instance.GetComponent<Rigidbody2D>().position = roomSpawner.StartRoom.transform.position;
     }
 
     public void Restart()
     {
         // Restart current floor. Destroys player.
-        sceneTransition.ReloadScene();
+        GameManager.Instance.Restart();
     }
 
     public void GoToNext()
     {
         // Restart current floor. DO NOT reset player.
-        DontDestroyOnLoad(player);
-        //DontDestroyOnLoad(camera);
-        sceneTransition.LoadScene("Game");
-        player.transform.position = roomSpawner.StartRoom.transform.position; // The player won't reset to the spawn room without this line despite this line already being in Start().
+        SceneTransition.Instance.ReloadScene();
     }
 }

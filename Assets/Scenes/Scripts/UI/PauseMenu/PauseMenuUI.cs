@@ -17,20 +17,33 @@ public class PauseMenuUI : MonoBehaviour
         isPaused = false;
     }
 
+    public void TogglePause(){
+        if(isPaused){
+            Resume();
+        }
+        else {
+            Pause();
+        }
+    }
+
     public void Pause(){
         Time.timeScale = 0;
         canvas.enabled = true;
         isPaused = true;
     }
 
-    public void OnResumePressed(){
+    public void Resume(){
         Time.timeScale = 1;
         canvas.enabled = false;
         isPaused = false;
     }
 
+    public void OnResumePressed(){
+        Resume();
+    }
+
     public void OnExitToMenuPressed(){
         Time.timeScale = 1;
-        SceneTransition.Instance.LoadScene(menuScene);
+        GameManager.Instance.GoToMenu();
     }
 }

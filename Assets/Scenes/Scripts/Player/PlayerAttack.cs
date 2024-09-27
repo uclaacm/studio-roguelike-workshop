@@ -15,6 +15,9 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
+        if(!camera){
+            camera = Camera.main;
+        }
         if(PauseMenuUI.isPaused){
             return;
         }

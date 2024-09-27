@@ -9,7 +9,7 @@ public class PlayerPause : MonoBehaviour
 
     void OnPause(InputValue v){
         if(v.isPressed){
-            pauseMenuUI.Pause();
+            pauseMenuUI.TogglePause();
         }
     }
 }

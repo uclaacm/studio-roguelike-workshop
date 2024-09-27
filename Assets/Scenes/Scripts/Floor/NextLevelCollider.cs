@@ -4,27 +4,13 @@ using UnityEngine;
 
 public class NextLevelCollider : MonoBehaviour
 {
-    [SerializeField] Floor floor;
     [SerializeField] BoxCollider2D boxCollider;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("NextLevelCollider Trigger activated!");
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            floor.GoToNext();
+            Floor.Instance.GoToNext();
         }
     }
 }

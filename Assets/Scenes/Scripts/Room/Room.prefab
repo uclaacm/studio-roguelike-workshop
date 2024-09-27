@@ -335,6 +335,7 @@ MonoBehaviour:
   room: {fileID: 5976932445550731661}
   enemyPool: {fileID: 11400000, guid: 0d2e9434f4ce7c5b2a776f1422aab552, type: 2}
   bossPool: {fileID: 11400000, guid: 7735568477a192df3b7e4ff267fff4d3, type: 2}
+  portalPrefab: {fileID: 5314188448639486195, guid: 2fef70f37c357681b8291c7fd6454bea, type: 3}
 --- !u!114 &3209284222465957408
 MonoBehaviour:
   m_ObjectHideFlags: 0
