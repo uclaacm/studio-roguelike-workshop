@@ -58,7 +58,6 @@ public class Projectile : MonoBehaviour
         // After getting that script, we can call TakeDamage(damage) on that script to deal damage
         // Unity documentation: https://docs.unity3d.com/ScriptReference/Component.GetComponent.html
         if(!other.gameObject.CompareTag(SourceTag)){
-            Debug.Log(other.gameObject);
             Entity entity = other.GetComponent<Entity>();
             // if what we hit is an entity
             if(entity){

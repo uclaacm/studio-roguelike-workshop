@@ -6,7 +6,6 @@ public class Player : MonoBehaviour {
 	public static bool IsDead => !Instance;
 
 	void Awake(){
-		Debug.Log($"AWAKE: {gameObject.GetInstanceID()}");
 		if(Instance){
 			Destroy(gameObject);
 			return;
