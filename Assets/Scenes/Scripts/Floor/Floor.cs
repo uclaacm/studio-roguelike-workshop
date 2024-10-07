@@ -22,7 +22,7 @@ public class Floor : MonoBehaviour
         player = Player.Instance.gameObject;
         randomMap = MapGenerator.RandomMap(10, 10, 10, 20, 0.2f, 0.2f);
         roomSpawner.SpawnFromMap(randomMap);
-        player.transform.position = roomSpawner.StartRoom.transform.position;
+        player.transform.position = roomSpawner.StartRoom.Layout.ItemSpawnPoint.position;
         Player.Instance.GetComponent<Rigidbody2D>().position = roomSpawner.StartRoom.transform.position;
     }
 

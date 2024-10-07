@@ -39,6 +39,7 @@ public class RoomLayoutPoolSO : ScriptableObject {
         // probability for layouts in smaller pools)
         // select a random layout index from across all pools
         int layoutIndex = Random.Range(0, totalLayouts);
+        Debug.Log(layoutIndex);
         foreach(var pool in validPools) {
             if(layoutIndex < pool.Count){
                 return pool[layoutIndex];
