@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1034534b0002becfac96a5596796188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMult: 3
-  lifetimeMult: 0.03
-  shotSpeedMult: 3
+  speedMult: 1.5
+  lifetimeMult: 0.1
+  shotSpeedMult: 2
   damageMult: 1.25
   cooldownMult: 0.3333
   thirdShotDamageMult: 2

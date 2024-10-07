@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 379594820961333807, guid: f05fd8437a69ae7c7809903b07ce1ede, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 948701936244972610, guid: f05fd8437a69ae7c7809903b07ce1ede, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3104559028992754470, guid: f05fd8437a69ae7c7809903b07ce1ede, type: 3}
       propertyPath: m_Name
       value: RoomLayout
@@ -52,9 +60,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3329468121407467413, guid: f05fd8437a69ae7c7809903b07ce1ede, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421230144802305601, guid: f05fd8437a69ae7c7809903b07ce1ede, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 6825403283022199033, guid: f05fd8437a69ae7c7809903b07ce1ede, type: 3}
       propertyPath: Debug
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643476290837498769, guid: f05fd8437a69ae7c7809903b07ce1ede, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8029102889264784600, guid: f05fd8437a69ae7c7809903b07ce1ede, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -663,6 +663,111 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: door_closed_v
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 16
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c202788546be0c692d3c7f2468370a
+      internalID: -1388281657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_open_v
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 16
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78605b62daf67edb5af4b545af296286
+      internalID: 2059394917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_closed_h
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 46
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acad8d7d4bed200839de1b769b14cbff
+      internalID: 1458222896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_open_h
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 16
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ad3aee01e42c87ea9e7f090c3cb5d8
+      internalID: -733470976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axo-env_27
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 128
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6383da5fa39b2d5a8021ff8acacf25f
+      internalID: -1488220205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -694,6 +799,7 @@ TextureImporter:
       axo-env_24: 687209417
       axo-env_25: -460786287
       axo-env_26: 1117266512
+      axo-env_27: -1488220205
       axo-env_3: -981912475
       axo-env_4: -1566525335
       axo-env_5: -593513675
@@ -701,6 +807,10 @@ TextureImporter:
       axo-env_7: 1915858343
       axo-env_8: -1012256324
       axo-env_9: 1926702054
+      door_closed_h: 1458222896
+      door_closed_v: -1388281657
+      door_open_h: -733470976
+      door_open_v: 2059394917
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

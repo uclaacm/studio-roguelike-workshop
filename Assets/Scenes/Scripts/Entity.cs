@@ -37,7 +37,7 @@ public class Entity : MonoBehaviour
     {
         if(dead) return;
 
-        CurrentHealth -= damage;
+        CurrentHealth -= Mathf.Ceil(damage);
 
         if (CurrentHealth <= 0)
         {

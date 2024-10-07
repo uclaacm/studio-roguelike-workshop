@@ -17,7 +17,7 @@ public class RoomItem : MonoBehaviour
         room.PlayerFirstEnteredRoomEvent.AddListener(OnPlayerEnterRoom);
 
         if(itemPoolRemaining == null){
-            itemPoolRemaining = itemPool.Items;
+            itemPoolRemaining = new List<ItemSO>(itemPool.Items);
         }
     }
 
@@ -28,6 +28,7 @@ public class RoomItem : MonoBehaviour
     void SpawnItem(){
         // ran out of items :(
         if(itemPoolRemaining.Count == 0) {
+            Debug.Log("Ran out of items");
             return;
         }
         int itemIndex = Random.Range(0, itemPoolRemaining.Count);

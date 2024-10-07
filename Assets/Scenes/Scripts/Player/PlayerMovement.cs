@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
 
     Entity entity;
 
+    Vector2 movementDir = Vector2.zero;
+
     void Start(){
         entity = GetComponent<Entity>();
     }
@@ -35,6 +37,10 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     public void OnMove(InputValue inputValue)
     {
-        rigidbody.velocity = inputValue.Get<Vector2>() * entity.stats.MovementSpeed;
+        movementDir = inputValue.Get<Vector2>();
+    }
+
+    void FixedUpdate(){
+        rigidbody.velocity = movementDir * entity.stats.MovementSpeed;
     }
 }

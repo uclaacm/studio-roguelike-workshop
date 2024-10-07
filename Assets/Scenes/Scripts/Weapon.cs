@@ -13,10 +13,9 @@ public class Weapon : MonoBehaviour
     [SerializeField] public float ShootingCooldown = 1;
     [SerializeField] public float Damage = 1;
     [SerializeField] public float ProjectileLifetime = 5;
+    [SerializeField] public float ProjectileScale = 1;
 
     float lastShotTime;
-
-    float offset = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -32,11 +31,9 @@ public class Weapon : MonoBehaviour
         if (Time.time - lastShotTime > ShootingCooldown)
         {
 
-            // offset so you don't take damage from your own bullet
-            Vector3 position = transform.position + new Vector3(direction.x, direction.y, 0) * offset;
-
             // Load in a projectile
-            GameObject projectile = Instantiate(projectilePrefab, position, Quaternion.identity);
+            GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            projectile.transform.localScale *= ProjectileScale;
 
             // Set projectile lifetime and damage
             Projectile projectileScript = projectile.GetComponent<Projectile>();
