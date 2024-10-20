@@ -20,14 +20,16 @@ public class PlayerAttack : MonoBehaviour
         
     }
 
-    public void OnClick()
+    public void OnClick(InputValue value)
     {
-        Vector3 mouseScreenPos = Mouse.current.position.ReadValue();
-        Vector3 mouseWorldPos = camera.ScreenToWorldPoint(mouseScreenPos + new Vector3(0, 0, camera.nearClipPlane));
+        if (value.isPressed)
+        {
+            Vector3 mouseScreenPos = Mouse.current.position.ReadValue();
+            Vector3 mouseWorldPos = camera.ScreenToWorldPoint(mouseScreenPos + new Vector3(0, 0, camera.nearClipPlane));
 
         // find normalized direction vector
 
         // Shoot
-
+        }
     }
 }
