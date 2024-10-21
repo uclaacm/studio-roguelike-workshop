@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
 
-    // Variables
+    [SerializeField] float range;
+    [SerializeField] GameObject player;
     
     // Start is called before the first frame update
     void Start()
@@ -16,11 +17,15 @@ public class EnemyAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Get player position
+        var playerPos = player.transform.position;
 
-        // do vector math
+        var displacement = playerPos - transform.position;
+        var distance = displacement.magnitude;
 
-        // Shoot if in range
+        if (distance < range)
+        {
+            GetComponent<Weapon>().Shoot(displacement / distance);
+        }
 
     }
 }

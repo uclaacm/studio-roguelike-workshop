@@ -6,14 +6,16 @@ using UnityEngine.Events;
 
 public class Weapon : MonoBehaviour
 {
-    // projectile stats
+    [SerializeField] GameObject projectilePrefab;
+    [SerializeField] float projectileSpeed;
+    [SerializeField] float shootingCooldown;
 
-    // offset    
+    float lastShotTime = 0;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -24,10 +26,18 @@ public class Weapon : MonoBehaviour
 
     public void Shoot(Vector2 direction)
     {
-        // offset projectile spawning
 
-        // instantiate the projectile
+        if (Time.time - lastShotTime > shootingCooldown)
+        {
+            GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
 
-        // give it velocity (NYOOM)
+            Projectile projectileScript = projectile.GetComponent<Projectile>();
+            projectileScript.SourceTag = gameObject.tag;
+
+            projectile.GetComponent<Rigidbody2D>().velocity = new Vector3(direction.x, direction.y, 0) * projectileSpeed;
+
+            lastShotTime = Time.time;
+        }
+        
     }
 }

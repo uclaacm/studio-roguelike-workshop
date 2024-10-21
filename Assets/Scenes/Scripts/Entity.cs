@@ -9,27 +9,34 @@ public class Entity : MonoBehaviour
     [Serializable]
     public struct EntityStats
     {
-        // max health
+        public float MaxHealth;
         public float MovementSpeed;
     }
 
     public EntityStats stats;
 
-    // Non-serialized stuff goes here 
+    [NonSerialized]
+    public float CurrentHealth;
+    bool dead = false;
 
     private void Start()
     {
-        // Initialize CurrentHealth here
+        CurrentHealth = stats.MaxHealth;
     }
 
     public void TakeDamage(float damage)
     {
-        // Change CurrentHealth based on damage
-        // Invoke dying if necessary 
+        CurrentHealth -= Mathf.Ceil(damage);
+
+        if (CurrentHealth <=0)
+        {
+            Die();
+        }
     }
 
     private void Die()
     {
-        // Die
+        dead = true;
+        Destroy(gameObject);
     }
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     // Variables 
+    [SerializeField] float damage = 1f;
+    [SerializeField] public string SourceTag;
     
     
     // Start is called before the first frame update
@@ -21,6 +23,17 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // do damage
+        
+        if(!other.gameObject.CompareTag(SourceTag))
+        {
+            Entity entity = other.GetComponent<Entity>();
+
+            if(entity)
+            {
+                entity.TakeDamage(damage);
+            }
+            Destroy(gameObject);
+
+        }
     }
 }
