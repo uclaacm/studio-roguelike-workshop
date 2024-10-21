@@ -4,14 +4,15 @@ using UnityEngine;
 using System;
 using UnityEngine.Events;
 
+[Serializable]
+public class EntityStats
+{
+    // max health
+    public float MovementSpeed;
+}
+
 public class Entity : MonoBehaviour
 {
-    [Serializable]
-    public struct EntityStats
-    {
-        // max health
-        public float MovementSpeed;
-    }
 
     public EntityStats stats;
 
