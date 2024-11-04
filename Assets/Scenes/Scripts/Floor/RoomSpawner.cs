@@ -93,6 +93,9 @@ public class RoomSpawner : MonoBehaviour
                 }
             }
         }
+        if (!StartRoom){
+            Debug.LogError("No start room spawned!");
+        }
     }
 
     RoomContents MapEntryTypeToRoomContents(MapEntryType type)
