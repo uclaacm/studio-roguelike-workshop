@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1136195875146907780}
   m_Layer: 0
   m_Name: EnemyBase
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,5 +171,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7a0441c05523e48bf721b8b9763ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   stats:
+    MaxHealth: 0
     MovementSpeed: 0
+  DeathEvent:
+    m_PersistentCalls:
+      m_Calls: []

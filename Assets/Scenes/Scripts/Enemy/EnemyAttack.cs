@@ -6,7 +6,6 @@ public class EnemyAttack : MonoBehaviour
 {
 
     [SerializeField] float range;
-    [SerializeField] GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +17,8 @@ public class EnemyAttack : MonoBehaviour
     void Update()
     {
         // if player is dead, do nothing
-        if (player == null) return;
-        var playerPos = player.transform.position;
+        if (Player.Instance == null) return;
+        var playerPos = Player.Instance.transform.position;
 
         var displacement = playerPos - transform.position;
         var distance = displacement.magnitude;
@@ -28,6 +27,5 @@ public class EnemyAttack : MonoBehaviour
         {
             GetComponent<Weapon>().Shoot(displacement / distance);
         }
-
     }
 }
