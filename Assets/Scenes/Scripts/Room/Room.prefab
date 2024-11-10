@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 217618059605083526}
   - component: {fileID: 5976932445550731661}
   - component: {fileID: 3209971333458447819}
+  - component: {fileID: 2709576733497864174}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -167,6 +168,20 @@ MonoBehaviour:
   enemyPool: {fileID: 11400000, guid: 0d2e9434f4ce7c5b2a776f1422aab552, type: 2}
   bossPool: {fileID: 11400000, guid: 7735568477a192df3b7e4ff267fff4d3, type: 2}
   portalPrefab: {fileID: 5314188448639486195, guid: 2fef70f37c357681b8291c7fd6454bea, type: 3}
+--- !u!114 &2709576733497864174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7406825414062079965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ef8f080da316a8dbef09be74628e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 5976932445550731661}
+  itemPool: {fileID: 11400000, guid: a721a8d76f4f803418e0255fb7aa3731, type: 2}
 --- !u!1 &7785149359585060070
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,7 +416,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1346862893
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
