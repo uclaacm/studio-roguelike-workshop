@@ -13,10 +13,4 @@ MonoBehaviour:
   m_Name: Item Room Pool
   m_EditorClassIdentifier: 
   Items:
-  - {fileID: 11400000, guid: e60bb320b198f45af994490efa755500, type: 2}
   - {fileID: 11400000, guid: 951c69682a8784ad3a41f579535ec7e5, type: 2}
-  - {fileID: 11400000, guid: 5f0fc13dee351210fbfb2d60a1eb6b7b, type: 2}
-  - {fileID: 11400000, guid: fd3e2a72e031e1c6a8d810a609a97496, type: 2}
-  - {fileID: 11400000, guid: 6a296719b883a6a18938c4a75a86f28b, type: 2}
-  - {fileID: 11400000, guid: 7ea070100308138659267d7f6ab39728, type: 2}
-  - {fileID: 11400000, guid: 4e9566c46f1bd080ca68c8059b02dd25, type: 2}
