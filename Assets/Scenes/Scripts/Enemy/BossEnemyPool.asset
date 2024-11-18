@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BossEnemyPool
   m_EditorClassIdentifier: 
   EnemyPrefabs:
-  - {fileID: 7315857535937599833, guid: 6fb8d298636f9cf199dc46a1c1f7543b, type: 3}
+  - {fileID: 8427128814846987572, guid: fdf9d3d097dbf156fa9897924a6b87aa, type: 3}

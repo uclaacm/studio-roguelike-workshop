@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: BasicEnemyPool
   m_EditorClassIdentifier: 
   EnemyPrefabs:
-  - {fileID: 7315857535937599833, guid: 6fb8d298636f9cf199dc46a1c1f7543b, type: 3}
+  - {fileID: 5048110942589723072, guid: 1df1fa5ff45954988bddd7cf61262b16, type: 3}
+  - {fileID: 8427128814846987572, guid: 89155ffc5006b534fb9d18ff3a9f378b, type: 3}
+  - {fileID: 8427128814846987572, guid: f17df90b8d1c1a82fb2c67fa86f98e0b, type: 3}
+  - {fileID: 8427128814846987572, guid: 98369f005f2663b99934520a6077391a, type: 3}

@@ -4,28 +4,28 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-
     [SerializeField] float range;
+    [SerializeField] float initialAttackDelay = 2;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    Weapon weapon;
 
+    float startTime;
+
+    void Start(){
+        weapon = GetComponent<Weapon>();
+        startTime = Time.time;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         // if player is dead, do nothing
-        if (Player.Instance == null) return;
+        if(Player.IsDead) return;
+        if(Time.time < startTime + initialAttackDelay) return;
         var playerPos = Player.Instance.transform.position;
-
         var displacement = playerPos - transform.position;
         var distance = displacement.magnitude;
 
-        if (distance < range)
-        {
-            GetComponent<Weapon>().Shoot(displacement / distance);
+        if(distance < range){
+            weapon.Shoot(displacement / distance);
         }
     }
 }
