@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d60abd82ef08804f90b5fd9dbc1af3f, type: 3}
   m_Name: Item Room Pool
   m_EditorClassIdentifier: 
-  Items:
-  - {fileID: 11400000, guid: 951c69682a8784ad3a41f579535ec7e5, type: 2}
+  Items: []
